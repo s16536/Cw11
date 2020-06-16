@@ -16,6 +16,7 @@ namespace lab11.Models
         public DbSet<Prescription> Prescription { get; set; }
 
         public DbSet<Medicament> Medicament { get; set; }
+
         public DbSet<PrescriptionMedicament> PrescriptionMedicament { get; set; }
 
         public DoctorsDbContext() {}
