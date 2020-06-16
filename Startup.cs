@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using lab11.Models;
+using lab11.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,8 +18,12 @@ namespace lab11
 {
     public class Startup
     {
+        private readonly string _connectionString = "Data Source=db-mssql;Initial Catalog=s16536;Integrated Security=True";
+
         public Startup(IConfiguration configuration)
         {
+            // SampleData.SampleData.CreateSampleData(new DoctorsDbContext(new DbContextOptionsBuilder()
+            //     .UseSqlServer((_connectionString)).Options));
             Configuration = configuration;
         }
 
